@@ -6,4 +6,4 @@ CURRENT_VERSION=$(cat composer.json | grep version | head -1 | awk -F= "{ print 
 sed -ie "s/\"version\": \"$CURRENT_VERSION\"/\"version\": \"$NEXT_VERSION\"/g" composer.json
 rm -rf composer.jsone
 
-zip -qr ./build/asset-manifest-$NEXT_VERSION.zip composer.json composer.lock src
+zip -r ./build/asset-manifest-$NEXT_VERSION.zip composer.json composer.lock src -q
