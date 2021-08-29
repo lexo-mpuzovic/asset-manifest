@@ -16,10 +16,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: Install Yarn dependencies
-        run: yarn install
-      - name: Release
+      - name: Install NPM dependencies
+        run: npm ci
+      - name: Zip files and make a release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 

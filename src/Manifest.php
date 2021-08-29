@@ -1,6 +1,7 @@
 <?php
 
-namespace Oblak\Asset;
+namespace Tronyx\Asset;
+
 /**
  * Class Manifest
  */
