@@ -1,6 +1,6 @@
 {
     "name": "tronyx/asset-manifest",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Asset Manifest handler for Asset Loader for Laravel Mix",
     "type": "library",
     "autoload": {
