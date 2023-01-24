@@ -18,10 +18,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Install Yarn dependencies
-        run: yarn install
+      - name: Install NPM dependencies
+        run: npm ci
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
